@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500');
+@import url("https://use.typekit.net/sno3vcr.css");
+
+
+@media only screen and (min-width: 580px){
+    .workBorder{
+        height: 85vh;
+    }
+    div.githubLinker{
+        height: 15vh;
+    }
+    div.emptySpace{
+        height: 25vh;
+    }
+    div.readMe{
+        height: 15vh;
+    }
+    p.readMe{
+        font-family: marydale, 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    div.contactMe{
+        height: 40vh;
+    }
+    div.socialMe{
+        height: 20vh;
+        text-align: center;
+        text-align-last: center;
+        vertical-align: middle;
+    }
+    i.iconspacing{
+        margin-right: 2%;
+    }
+    a.iconlink{
+        text-decoration: none;
+        border:none;
+        color: #000;
+    } 
+    a.iconlink:hover{
+        text-decoration: none;
+        border:none;
+        color: rgb(51, 48, 48);
+    }
+    a.iconlink:visited{
+        text-decoration: none;
+        border:none;
+        color: #000;
+    } 
+}
+
+
+@media only screen and (max-width: 580px){
+    .workBorder{
+        height: 84vh;
+    }
+    div.githubLinker{
+        height: 30vh; 
+    }
+    div.emptySpace{
+        height: 5vh; 
+    }
+    div.readMe{
+        height: 20vh;
+    }
+    p.readMe{
+        font-family: marydale, 'Ubuntu', Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    div.contactMe{
+        height: 40vh;
+    }
+    div.socialMe{
+        height: 20vh;
+        text-align: center;
+        text-align-last: center;
+        vertical-align: middle;
+    }
+    i.iconspacing{
+        margin-right: 2%;
+    }
+    a.iconlink{
+        text-decoration: none;
+        border:none;
+        color: #000;
+    } 
+    a.iconlink:hover{
+        text-decoration: none;
+        border:none;
+        color: rgb(51, 48, 48);
+    }
+    a.iconlink:visited{
+        text-decoration: none;
+        border:none;
+        color: #000;
+    } 
+}

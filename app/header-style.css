@@ -85,13 +85,13 @@
     }
     .irow{
         display: grid;
-        grid-template-columns: 45% 40% 60% 40%;
+        grid-template-columns: auto auto auto auto;
         height: 50%;
 
     }
     .row{
         display: grid;
-        grid-template-columns: 45% 45% 60% 45%;
+        grid-template-columns: auto auto auto auto;
         height: 50%;
 
     }

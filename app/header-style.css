@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500');
 @import url("https://use.typekit.net/sno3vcr.css");
 
-@media only screen and (min-width: 580px){
+@media only screen and (min-width: 700px){
+    body{
+        overflow-y:hidden;
+    }
     .header{
         width: 101%;
         height: 60px;
@@ -70,7 +73,7 @@
     }
 }
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 700px){
     body{
         overflow-y:hidden;
     }
@@ -82,7 +85,7 @@
     }
     .irow{
         display: grid;
-        grid-template-columns: 45% 45% 55% 45%;
+        grid-template-columns: 45% 40% 60% 40%;
         height: 50%;
 
     }

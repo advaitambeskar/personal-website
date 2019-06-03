@@ -1,70 +1,493 @@
-<!DOCTYPE html>
-<html>
-<!--
-    Hi! My name is Advait Ambeskar. I am relatively new in the rather fast-paced field of User Design, Front-end development
-    and Web development. It makes sense, considering the fact that I am only 22 years old (at the time of update)
-    
-    The design is pretty simple and utilitarian, and if you wish to cut through the narrative, skip directly to line 22.
-
-
-    Before you start reading through the template of this code, which is fair, it is obviously available online, and
-    don't worry about it, it doesn't matter why you are reading this, but you are and I would like you to know a few things.
-    Firstly, I built this website in less than four hours. If I am being completely honest, I have a vision in my mind,
-    and I just had to write it down. The reason why I tell you this is because that means that the 'code' will be disorganized
-    and spread out.
-    I sat down after a few episodes of NCIS (the o.g.) and Frasier, partly because I wanted to complete this for the longest
-    time now, and partly because it had to be done. Luckily enough I wasn't sleepy, so I sat down, consuming a large volume of music
-    and completing this. I started with Christmas Music, as it only seemed fair to celebrate the season, and slowly graduated to
-    punk rock and 60s rock, ending this at a rather high note. I hope my silent jamming did not accidentally wake my roommate up!
-    I hope you find this code to be useful. I am sure there are many efficient ways of doing the things thaat I have done, and I am
-    happy to tell you that slowly, albeit steadily I am learning those methods.
-
-    The code is simple. The entry point is index.html, and there are associated css files for each page. I have use the adobe fonts.
-    I hope you find it all simple.
-
-    Advait Ambeskar
-    -- 12/19/2018
-
--->
+<!DOCTYPE html >
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Advait Ambeskar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="app/middle-style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="app/header-style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="app/footer-style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8">
+    <link rel="shortcut icon" type="image/png" href="./res/pixelface.jpg"/>
+    <title>Personal Website for Advait Ambeskar</title>
+    <!--
+        link source to main css stylesheet
+    -->
+    <link type="text/css" href="./styles/style.css" rel='stylesheet' />
 
+    <!--
+        link source to the font awesome for icons
+    -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!--
+        fontisto 
+    -->
+    <link rel='stylesheet'
+    href='https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css'></i>
+    <!--
+    
+        script source for jquery 3.3.1 to be used for animation effects
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+    <!--
+        script for scroll effect
+    -->
+    <script>
+    $(document).ready(function(){
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+
+                var hash = this.hash;
+
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+            
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+    </script>
 </head>
 
 <body>
-    <!-- header -->
-    <div class='header'>
-        <div class='irow'>
-            <div>
-            </div>
-            <div class='border'>
-                <a class='button-size button-style border' href="./about.html">ABOUT</a>
-                <a class='button-size button-style border' href='http://blog.advaitambeskar.com/'>BLOG</a>
-            </div>
-            <div class='border'>
-                <a class='button-size button-style border' href="https://advaitambeskar.github.io/">PORTFOLIO</a>
-                <a class='button-size button-style border' href="./work.html">WORKS</a>
-            </div>
-        </div>
-    </div>
-    <!-- middle -->
-    <div class="firstName">
-        <p class="position" id="nameInsert">{{name}}</p>
-    </div>
+    <div class='front-page'>
 
-    <!-- Footer -->
+        <!--
+            DESKTOP CODE
+        -->
+        <section id='navigation-desktop' class = 'desktop-navigation'>
+            <div class='nav-box'>
+                <div class='background'>
+                    <div class='color-overlay'>
+                        <!--
+                            POSSIBLY CHANGE THE BACKGROUND TO SOMETHING GEOMETRIC?
+                            CARD BASED SKILL/ Project Display?
+                        -->
+                    </div>
+                </div>
+                <div class='navigation-center'>
+                    <div class='upper-space'></div>
+                    <div class='name'>
+                        <div>
+                        </div>
+                        <div class='icon'>
+                            <span class='icon-text'>&nbsp;ADVAIT AMBESKAR&nbsp;</span>
+                        </div>
+                        <div>
+                        </div>
+                    </div>
+                    <section class='navbar-section'>
+                        <div></div>
+                        <div class='grid-navbar'>
+                            <div></div>
+                            <div class='flex-container navbar-icon'>
+                                <span class="navbar-icon-text"><a href='#about-me-desktop' class='navbar-desk'>&nbsp;About&nbsp;</a></span>
+                            </div>
+                            <div class='flex-container navbar-icon'>
+                                <span class="navbar-icon-text"><a href='#resume-desktop' class='navbar-desk'>&nbsp;Resume&nbsp;</a></span>
+                            </div>
+                            <div class='flex-container navbar-icon'>
+                                <span class="navbar-icon-text"><a href='https://advaitambeskar.github.io/' class='navbar-desk'>&nbsp;Work&nbsp;</a></span>
+                            </div>
+                            <div class='flex-container navbar-icon'>
+                                <span class="navbar-icon-text"><a href='http://blog.advaitambeskar.com/' class='navbar-desk'>&nbsp;Notes&nbsp;</a></span>
+                            </div>
+                            <div class='empty-navbar'></div>
+                        </div>
+                    </section>
+                    <div></div>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer">
-        <a class="footer" href="http://www.advaitambeskar.com/">advaitambeskar.com</a>
+        <section id='about-me-desktop' class='about-me-section-desktop'>
+            <div class='about-me-desktop'>
+                <div class='upper-gap'>
+                </div>
+                <div class='about-me-content'>
+                    <div class='upper-gap'>
+                    </div>
+                    <div class='content-row'>
+                        <div class='upper-gap'>
+                        </div>
+                        <div class='content-column'>
+                            <div class='intro-content'>
+                                <div class='upper-gap'></div>
+                                <div class='introduction'>
+                                    &#10084;
+                                </div>
+                                <div class='lower-gap'></div>
+                            </div>
+                            <div class='desc-content'>
+                                <div class='upper-gap'></div>
+                                <div class='description-columns'>
+                                    <div class='upper-gap'></div>
+                                    <div class='description'>
+                                        <!--
+                                            I work on<br />
+                                        -->
+                                        <span class='descriptive'>
+                                        &nbsp;&nbsp;Website Development
+                                        </span>
+                                        <br />
+                                        <span class='descriptive'>
+                                        &nbsp;&nbsp;Application Development
+                                        </span>
+                                        <br />
+                                        <span class='descriptive'>
+                                        &nbsp;&nbsp;UI/UX Design
+                                        </span>
+                                    </div>
+                                    <div class='lower-gap'></div>
+                                </div>
+                                <div class='lower-gap'></div>
+                            </div>
+                        </div>
+                        <div class='lower-gap'>
+                        </div>
+                    </div>
+                    <div class='lower-gap'>
+                    </div>
+                </div>
+                <div class='lower-gap about-me-back-top'>
+                    <div class='upper-top'>
+                        <div>
+                            <a href='#resume-desktop'>RESUME SECTION</a>
+                        </div>
+                    </div>
+                    <div class='upper-gap'></div>
+                    <div class='middle-gap'></div>
+                    <div class='upper-top'>
+                        <div>
+                            <a href='#navigation-desktop'>BACK TO TOP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id='resume-desktop' class='resume-section-desktop'>
+            <div class='resume-container-box'>
+                <div class='upper-gap'></div>
+                <div class='resume-container'>
+                    <div class='heading-gap'>
+                        <div class='resume-heading'>
+                            <span>&nbsp;&nbsp;SKILLS</span>
+                        </div>
+                        <div class='gap'></div>
+                        <div class='buttons'>
+                            <div class='resume-button'>
+                                <a class='resume-but' href='./res/resume.pdf' target='_blank'>&nbsp;<i class="fas fa-file fa-2x"></i>&nbsp;RESUME&nbsp;</a>
+                            </div>
+                            <div class='portfolio-button'>
+                                <a class='portfolio-but' href='http://advaitambeskar.github.io/' target='_blank'>&nbsp;<i class="fas fa-briefcase fa-2x"></i>&nbsp;WORKS&nbsp;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='resume-box'>
+                        <div class='card-container'>
+                            <div class='card'>
+                                <div class='side divided-card'>
+                                    <div class='upper-gap'></div>
+                                    <div class='skills'>
+                                        <span class='skill-title'>
+                                            WEB DEVELOPMENT
+                                        </span>
+                                    </div>
+                                    <div class='lower-gap'></div>
+                                </div>
+                                <div class='side back'>
+                                    <div class='backside'>
+                                        <span class='backside-heading'>
+                                            HTML, CSS3 + JavaScript
+                                        </span>
+                                        <br />
+                                        <span class='backside-description'>
+                                            <ul>
+                                                <li>7+ years experience in developing websites.</li>
+                                                <li>Proficient in front-end and back-end JavaScript frameworks.</li>
+                                            </ul>
+                                        </span>
+                                        <span class='backside-heading'>
+                                            JavaScript Frameworks
+                                        </span>
+                                        <br />
+                                        <span class='backside-description'>
+                                            <ul>
+                                                <li>3+ years of experience in MEAN, MERN framework bundles.</li>
+                                                <li>Designed and developed multiple web applications.</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class='card-container'>
+                            <div class='card'>
+                                <div class='side divided-card'>
+                                    <div class='upper-gap'></div>
+                                    <div class='skills'>
+                                        <span class='skill-title'>
+                                            APP DEVELOPMENT
+                                        </span>
+                                    </div>
+                                    <div class='lower-gap'></div>
+                                </div>
+                                <div class='side back'>
+                                    <div class='backside'>
+                                        <span class='backside-heading'>
+                                            Android Application
+                                        </span>
+                                        <br />
+                                        <span class='backside-description'>
+                                            <ul>
+                                                <li>Proficient in Java programming language.</li>
+                                            </ul>
+                                        </span>
+                                        <br />
+                                        <span class='backside-heading'>
+                                            Application Design
+                                        </span>
+                                        <br />
+                                        <span class='backside-description'>
+                                            <ul>
+                                                <li>Design using Adobe Photoshop and Adobe XD for UI/UX design.</li>
+                                            </ul>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='lower-gap'></div>
+                </div>
+                <div class='lower-gap'></div>
+            </div>
+            <div class='lower-gap about-me-back-top'>
+                <div class='upper-top'>
+                    <div>
+                        <a href='#contact-us'>CONTACT ME</a>
+                    </div>
+                </div>
+                <div class='upper-gap'></div>
+                <div class='middle-gap'></div>
+                <div class='upper-top'>
+                    <div>
+                        <a href='#navigation-desktop'>BACK TO TOP</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id='contact-us' class='contact-us-section'>
+            <div class='contact-section-outer-div'>
+                <div class='upper-gap'>
+                </div>
+                <div class='contact-us-inner-div'>
+                    <div class='upper-gap'>
+                    </div>
+                    <div class='contact-us-div'>
+                        <div class='upper-gap'>
+                        </div>
+                        <div class='contact-us'>
+                            <div class='upper-gap'></div>
+                            <div class='contact'>
+                                <div class='upper-gap'></div>
+                                <div class='contact-description-div'>
+                                    <div class='upper-gap'></div>
+                                    <div class='contact-description'>
+                                    <span class='contact-des'>
+                                        CONTACT ME
+                                    </span>
+                                    </div>
+                                    <div class='lower-gap'></div>
+                                </div>
+                                <div class='contact-button-div'>
+                                    <div></div>
+                                    <div>
+                                        <a class='contact-icon' href='https://www.linkedin.com/in/advaitambeskar/' target='_blank'><i class="fab fa-linkedin"></i></a>
+                                        <a class='contact-icon' href='https://github.com/advaitambeskar' target='_blank'><i class="fab fa-github"></i></a>
+                                        <a class='contact-icon' href='mailto://ambeskaradvait@gmail.com/' target='_blank'><i class="fas fa-paper-plane"></i></a>
+                                        <a class='contact-icon' href='https://twitter.com/ambeskaradvait' target='_blank'><i class="fab fa-twitter"></i></a>
+                                        <a class='contact-icon' href='http://blog.advaitambeskar.com/' target='_blank'><i class="fas fa-blog"></i></a>
+                                    </div>
+                                    <div></div>
+                                </div>
+                                <div class='lower-gap old-website'>
+                                    <a class='contact-icon-old-website' href='./old_website/' target='_blank'>
+                                        OLD WEBSITE
+                                    </a>
+                                </div>
+                            </div>
+                            <div class='lower-gap'></div>
+                        </div>
+                        <div class='lower-gap'>
+                        </div>
+                    </div>
+                    <div class='lower-gap'>
+                    </div>
+                </div>
+                <div class='lower-gap'>
+                </div>
+            </div>
+        </section>
+
+        
+        <!--
+            MOBILE CODE
+        -->
+        <section class = 'mobile-navigation'>
+            <div class='sticky-header'>
+                <div class='mobile-navigation-name'>
+                    <a href='http://www.advaitambeskar.com/' class='mobile-navigation-name-link'><span class='mobile-heading'>Advait Ambeskar</span></a>
+                </div>
+                <div class='mobile-empty-space'></div>
+                    <div class='mobile-navigation-icon'>
+                        <a href='./res/resume.pdf' class='mobile-link-navigation-icon'>
+                            &nbsp;<i class="fas fa-file"></i>&nbsp; RESUME&nbsp;
+                        </a>
+                        &nbsp;
+                        <a href='https://advaitambeskar.github.io/' class='mobile-link-navigation-icon'>
+                            &nbsp;&nbsp;<i class="fas fa-briefcase"></i>&nbsp;WORK&nbsp;
+                        </a>
+                    </div>
+            </div>
+        </section>
+
+        <section id='about-me-mobile' class='about-me-section-mobile'>
+            <div class='mobile-about-me'>
+                <div class='upper-gap'>
+                </div>
+                <div class='mobile-about-me-column'>
+                    <div class='upper-gap'></div>
+                    <div class='mobile-about-me-middle-column'>
+                        <div class='upper-gap'></div>
+                        <div class='mobile-about-me-middle'>
+                            <div class='mobile-heart'>
+                                <div></div>
+                                <div class='mobile-heart-inner'>&#10084;&nbsp;</div>
+                                <div></div>
+                            </div>
+                            <div class='mobile-information'>
+                                <div></div>
+                                <div>
+                                    <span class='descriptive'>
+                                        &nbsp;&nbsp;Website Development
+                                    </span>
+                                    <br />
+                                    <span class='descriptive'>
+                                        &nbsp;&nbsp;Application Development
+                                    </span>
+                                    <br />
+                                    <span class='descriptive'>
+                                        &nbsp;&nbsp;UI/UX Design
+                                    </span>
+                                </div>
+                                <div></div>
+                            </div> 
+                        </div>
+                        <div class='lower-gap'></div>
+                    </div>
+                    <div class='lower-gap'></div>
+                </div>
+                <div class='lower-gap'>
+                </div>
+            </div>
+        </section>
+        
+        <section id='resume-mobile' class='resume-section-mobile'>
+            <div class='mobile-resume-section'>
+                <div class='upper-gap'></div>
+                <div class='mobile-resume-division'>
+                    <div class='upper-gap'></div>
+                    <div class='mobile-resume'>
+                        <div class='upper-gap'></div>
+                        <div class='mobile-resume-div'>
+                            <div class='upper-gap'></div>
+                            <div class='mobile-resume-button-container'>
+                                <div class='mobile-resume-button-description'>
+                                    <div class='mobile-resume-button mobile-resume-web-dev-button'>
+                                        <div class='mobile-resume-title'>&nbsp;WEB DEV&nbsp;</div>
+                                        <div class='mobile-resume-description'>
+                                            <span class='mobile-resume-description-span'>
+                                                7+ years experience in developing websites using front
+                                                and back end JS frameworks (MEAN and MERN).
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class='mobile-resume-button'>
+                                        <div class='mobile-resume-title'>&nbsp;APP DEV&nbsp;</div>
+                                        <div class='mobile-resume-description'>
+                                            <span class='mobile-resume-description-span'>
+                                                Proficient in Java and Android Studio.
+                                                App design using Adobe Photoshop and Adobe XD.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='mobile-resume-button-buttons'>
+                                    <div class='mobile-resume-resume-button'>
+                                        <a class='mobile-resume-resume-button-link' href='./res/resume.pdf'>&nbsp;Resume&nbsp;</a>
+                                    </div>
+                                    <div class='mobile-resume-work-button'>
+                                        <a class='mobile-resume-work-button-link' href='https://advaitambeskar.github.io/' target="_blank">&nbsp;Portfolio&nbsp;</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='lower-gap'></div>
+                        </div>
+                        <div class='lower-gap'></div>
+                    </div>
+                    <div class='lower-gap'></div>
+                </div>
+                <div class='lower-gap'></div>
+            </div>
+        </section>
+        
+        <section id='contact-us-mobile' class='contact-us-section-mobile'>
+            <div class='contact-us-mobile'>
+                <div class='upper-gap'></div>
+                <div class='contact-us-container'>
+                    <div class='upper-gap'></div>
+                    <div class='contact-us-row'>
+                        <div class='contact-us-title-container'>
+                            <span>CONTACT ME</span>
+                        </div>
+                        <div class='contact-us-button-container'>
+                            <div class='start-row'></div>
+                            <div class='contact-us-button'>
+                                
+                                <div class='contact-us-mobile-button-row'>
+                                    <a class='mobile-contact-us-icon' href='https://www.linkedin.com/in/advaitambeskar/' target='_blank'>
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a class='mobile-contact-us-icon' href='https://github.com/advaitambeskar' target='_blank'>
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a class='mobile-contact-us-icon' href='mailto://ambeskaradvait@gmail.com/' target='_blank'>
+                                        <i class="fas fa-paper-plane"></i>
+                                    </a>
+                                    <a class='mobile-contact-us-icon' href='https://twitter.com/ambeskaradvait' target='_blank'>
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class='mobile-contact-us-icon' href='http://blog.advaitambeskar.com/' target='_blank'>
+                                        <i class="fas fa-blog"></i>
+                                    </a>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class='end-row'></div>
+                        </div>
+                    </div>
+                    <div class='lower-gap'></div>
+                </div>
+                <div class='lower-gap'></div>
+            </div>    
+        </section>
     </div>
-    <script src="./app/main.js"></script>
 </body>
 
 </html>

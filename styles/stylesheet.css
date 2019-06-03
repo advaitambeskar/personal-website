@@ -1,0 +1,133 @@
+@import url("https://use.typekit.net/jdn5xwm.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body{
+    background-image: linear-gradient(#1DF2A4, #22F2B7);
+}
+
+.layout{
+    display: grid;
+    border: 2px solid #e49fd5;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows:minmax(50px, auto);
+}
+.front-section{
+    grid-template-columns: repeat(1, 1fr);
+    /*border: 2px solid #232123;*/
+    margin: 0.5rem;
+    height: 95vh;
+    grid-auto-rows: minmax(100px, auto);
+    background-image: linear-gradient(#1DF2A4,#22F2B7);
+}
+.link-title{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    /*border: 2px solid #432342;*/
+    height: 7%;
+    color: #583BBF;
+}
+.center-title{
+    /*border:1px solid yellow;*/
+    text-align: center;
+    text-align-last: center;
+    vertical-align: middle;
+}
+.top-title-center{
+    font-family: zeitung-micro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vh;
+    
+}
+.top-title-center:hover{
+    border-bottom: 2px solid #583BBF;
+}
+.introduction-section{
+    /*border: 2px solid #432342;*/
+    margin-left: 4rem;  /* reduce it to 1rem or 0.5rem in mobile version */
+    margin-right: 4rem; /* reduce it to 1rem or 0.5rem in mobile version */
+    margin-top: 0.5rem;
+    height: 90%;
+    display: grid;
+    grid-template-columns: 10% auto 10%;  /* reduce it to 10px auto 10px in mobile version */
+}
+.introduction-center-desktop{
+    /*border: 1px solid #000000;*/
+    display: grid; 
+    grid-template-rows: 5% auto 5%;
+}
+.empty-center-desktop{
+    /* border:2px solid #884b88;
+    border-radius: 5px; */
+    /* background-color: #7572aa; */
+    display: block;
+}
+
+.introduction-center-design-desktop{
+    /* border:2px solid #169116; */
+    display:grid;
+    grid-template-rows: 25% 15% auto;
+}
+.introduction-center-design-desktop > div{
+    /* border:1px solid #000; */
+}
+
+.design-desktop-welcome{
+    display: grid;
+    grid-template-columns: auto 5%;
+}
+.design-desktop-welcome-text{
+    font-family: 'Roboto', san-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 8.9vw;
+    line-height: 80%;
+}
+
+.design-desktop-title{
+    display: grid;
+    grid-template-columns: auto 30%;
+    z-index:2;
+    
+}
+.design-desktop-title > div{
+    border: 1px solid #000; 
+}
+.design-desktop-title-layer{    
+    display:grid;
+    grid-template-columns: 1% 60% auto;
+}
+.desktop-title{
+    /* background-color: #4db65f; */
+    font-family: mr-eaves-sans, sans-serif; 
+    font-weight: 800; 
+    font-style: normal;
+    font-size: 2.3vw;
+    transform: rotate(-90deg) translate(-22vh, -13vw);
+}
+
+.design-desktop-grid-design{
+    display: grid;
+    grid-template-columns: 5% 55% 40%;
+}
+.design-desktop-grid-design > .border{
+    border: 1px solid #123;
+}
+.information-desktop{
+    display: grid;
+    grid-template-columns: 4% auto 4%;
+}
+.information-desktop{
+    font-family: adobe-caslon-pro,serif;
+    font-weight: 600;
+    font-style: normal;
+    text-align: justify;
+    text-align-last: left;
+    line-height: 100%;
+    font-size: 2vw;
+}
+.introduction-center-mobile{
+    display:none; /* remove this and add properties for mobile */
+}
